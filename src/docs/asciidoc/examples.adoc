@@ -1,0 +1,43 @@
+[[examplesscheme]]
+== Examples
+
+What follows are some examples of the API usage
+
+=== Endpoint A
+
+A get call
+
+include::{snippets}/endpoint-a-test/test-get-value/http-request.adoc[]
+
+Returns this
+
+include::{snippets}/endpoint-a-test/test-get-value/http-response.adoc[]
+
+
+A post call
+
+include::{snippets}/endpoint-a-test/test-post-value/http-request.adoc[]
+
+Returns this
+
+include::{snippets}/endpoint-a-test/test-post-value/http-response.adoc[]
+
+
+=== Endpoint B
+
+A get call
+
+include::{snippets}/endpoint-b-test/test-get-value/http-request.adoc[]
+
+Returns this
+
+include::{snippets}/endpoint-b-test/test-get-value/http-response.adoc[]
+
+
+A post call
+
+include::{snippets}/endpoint-b-test/test-post-value/http-request.adoc[]
+
+Returns this
+
+include::{snippets}/endpoint-b-test/test-post-value/http-response.adoc[]

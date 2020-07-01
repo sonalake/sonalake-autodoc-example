@@ -1,0 +1,7 @@
+:docnumber: S/DB2020032001
+include::{generated}/overview.adoc[]
+include::introduction.adoc[]
+include::examples.adoc[]
+include::{generated}/paths.adoc[]
+include::{generated}/definitions.adoc[]
+include::changes.adoc[]

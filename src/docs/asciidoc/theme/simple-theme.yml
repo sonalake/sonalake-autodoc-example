@@ -1,0 +1,52 @@
+# if not defined here, use the base config
+extends: base
+
+# general definition of the page
+page:
+  layout: portrait
+  margin: [0.75in, 1in, 0.75in, 1in]
+  size: A4
+
+
+# how to handle general formatting, related to images, captions, fonts, etc
+image:
+  align: center
+caption:
+  align: center
+  font_color: #FF0000
+font_size: 10
+
+# How to render the title page
+title_page:
+  align: right
+  logo_image: image:logo.png[width=250,align=left]
+
+# How to render headers - note the recto/verso stuff, it's a printing thing
+# (verso is the left page when printed, recto is the right)
+# The verso in our case is the same as recto, so we use this annotation to so
+header:
+  height: 0.75in
+  font-size: 8
+  line-height: 1
+  recto:  &shared_header
+    left:
+      content: image:logo.png[width=80]
+    right:
+      content: '*{document-title}*'
+  verso: *shared_header
+
+# How to handle the footers.
+footer:
+  height: 0.75in
+  font-size: 8
+  line-height: 1
+  recto:  &shared_footer
+    left:
+      content: |
+        {docnumber} {revnumber}
+        © COPYRIGHT SONALAKE LTD
+    right:
+      content: |
+        {page-number} ({page-count}) +
+        COMMERCIAL-IN-CONFIDENCE
+  verso: *shared_footer
