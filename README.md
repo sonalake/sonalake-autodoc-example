@@ -86,7 +86,8 @@ These files can be referenced in your document (see below).
 
 On every build the swagger json is pushed up under the name of `"${rootProject.name}-API"`
 
-It will use the `com.sonalake:swagger-changelog` project to collate a list of changes of _final_ versions into a
+It will use the [com.sonalake:swagger-changelog](https://plugins.gradle.org/plugin/com.sonalake.swagger-changelog)
+ project to collate a list of changes of _final_ versions into a
  changelog that is written to `build/asciidoc/generated/changelog`
  
 Your document just needs to index the `change-log.adoc` index in this directory.

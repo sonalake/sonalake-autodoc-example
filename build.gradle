@@ -1,15 +1,6 @@
 buildscript {
-
-  // this can come out once we release this plugin properly
-  repositories {
-    maven {
-      url "http://atlanta.sonalake.corp:8081/nexus/content/groups/public"
-      allowInsecureProtocol = true
-    }
-  }
   dependencies {
     classpath 'io.github.swagger2markup:swagger2markup-gradle-plugin:1.3.3'
-    classpath 'com.sonalake:swagger-changelog:1.1.1-SNAPSHOT'
     classpath 'com.google.guava:guava:20.0'
   }
 }
@@ -26,12 +17,12 @@ plugins {
 
   id 'maven-publish'
   id "org.datlowe.maven-publish-auth" version "2.0.2"
-
+  id 'com.gradle.plugin-publish' version '0.12.0'
+  id "com.sonalake.swagger-changelog" version "1.0.0"
 
 }
 
 apply plugin: 'io.github.swagger2markup'
-apply plugin: 'sonalake.ApiChangelog'
 
 
 group = 'com.sonalake'
@@ -162,3 +153,5 @@ publishing {
   }
 }
 tasks.withType(PublishToMavenRepository) { it.dependsOn asciidoctorPdf }
+
+
