@@ -18,7 +18,7 @@ plugins {
   id 'maven-publish'
   id "org.datlowe.maven-publish-auth" version "2.0.2"
   id 'com.gradle.plugin-publish' version '0.12.0'
-  id "com.sonalake.swagger-changelog" version "1.0.0"
+  id "com.sonalake.swagger-changelog" version "1.0.3"
 
 }
 
